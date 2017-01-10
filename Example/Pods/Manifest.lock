@@ -1,0 +1,16 @@
+PODS:
+  - BPSideMenuTransition (0.1.0)
+
+DEPENDENCIES:
+  - BPSideMenuTransition (from `../`)
+
+EXTERNAL SOURCES:
+  BPSideMenuTransition:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BPSideMenuTransition: 2e0762201973c658028f3b089d4cbbef20a628bf
+
+PODFILE CHECKSUM: 4d3eee883ab3faf375fbc845a35496ad0d713642
+
+COCOAPODS: 1.2.0.beta.3

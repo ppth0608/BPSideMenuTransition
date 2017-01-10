@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BPSideMenuTransition_Example' do
+  pod 'BPSideMenuTransition', :path => '../'
+
+  target 'BPSideMenuTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

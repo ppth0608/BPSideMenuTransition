@@ -1,0 +1,6 @@
+framework module BPSideMenuTransition {
+  umbrella header "BPSideMenuTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}
