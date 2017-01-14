@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class BPSideMenuTransion: UIStoryboardSegue, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     
@@ -23,20 +24,21 @@ class BPSideMenuTransion: UIStoryboardSegue, UIViewControllerTransitioningDelega
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromView = transitionContext.view(forKey: .from),
-              let toView = transitionContext.view(forKey: .to) else {
-            return
+            let toView = transitionContext.view(forKey: .to) else {
+                return
         }
         
-        let offSetTransform = CGAffineTransform(translationX: toView.frame.size.width - 180, y: 0)
-        let scaleTransform = offSetTransform.scaledBy(x: 0.6, y: 0.6)
+        let offSetTransform = CGAffineTransform(translationX: toView.frame.size.width - 80, y: 0)
+        //        let scaleTransform = offSetTransform.scaledBy(x: 0.6, y: 0.6)
         
         if let snapShot = fromView.snapshotView(afterScreenUpdates: true) {
+            toView.addSubview(snapShot)
             transitionContext.containerView.addSubview(toView)
-            transitionContext.containerView.addSubview(snapShot)
+            
             let duration = transitionDuration(using: transitionContext)
             
-            UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: [], animations: {
-                snapShot.transform = scaleTransform
+            UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
+                snapShot.transform = offSetTransform
             }) { _ in
                 transitionContext.completeTransition(true)
             }

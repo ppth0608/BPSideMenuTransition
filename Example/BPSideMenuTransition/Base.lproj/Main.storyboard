@@ -35,8 +35,12 @@
                             <constraint firstItem="hp1-5j-LgE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="w2o-Ch-qe6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="gfN-0w-Ihb" kind="unwind" customClass="BPSideMenuUnwindTransition" customModule="BPSideMenuTransition" unwindAction="unwindToViewControllerWithSegue:" id="nws-al-Yez"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="gfN-0w-Ihb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="174" y="139"/>
         </scene>
